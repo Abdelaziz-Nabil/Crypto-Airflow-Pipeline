@@ -1,0 +1,21 @@
+[2025-01-26T21:32:01.500+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-26T21:32:01.527+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_pipeline.LoadCrypto manual__2025-01-26T21:31:19.141063+00:00 [queued]>
+[2025-01-26T21:32:01.538+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_pipeline.LoadCrypto manual__2025-01-26T21:31:19.141063+00:00 [queued]>
+[2025-01-26T21:32:01.539+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-26T21:32:01.558+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): LoadCrypto> on 2025-01-26 21:31:19.141063+00:00
+[2025-01-26T21:32:01.566+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=978) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-26T21:32:01.570+0000] {standard_task_runner.py:72} INFO - Started process 979 to run task
+[2025-01-26T21:32:01.569+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'crypto_pipeline', 'LoadCrypto', 'manual__2025-01-26T21:31:19.141063+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/crypto_dag.py', '--cfg-path', '/tmp/tmpsb1oa06d']
+[2025-01-26T21:32:01.572+0000] {standard_task_runner.py:105} INFO - Job 29: Subtask LoadCrypto
+[2025-01-26T21:32:01.628+0000] {task_command.py:467} INFO - Running <TaskInstance: crypto_pipeline.LoadCrypto manual__2025-01-26T21:31:19.141063+00:00 [running]> on host 7bd917790fe1
+[2025-01-26T21:32:01.739+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crypto_pipeline' AIRFLOW_CTX_TASK_ID='LoadCrypto' AIRFLOW_CTX_EXECUTION_DATE='2025-01-26T21:31:19.141063+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-26T21:31:19.141063+00:00'
+[2025-01-26T21:32:01.741+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-26T21:32:01.758+0000] {store_crypto.py:48} INFO - Storing cryptocurrency data in the database...
+[2025-01-26T21:32:01.774+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-26T21:32:01.796+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-26T21:32:01.798+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=crypto_pipeline, task_id=LoadCrypto, run_id=manual__2025-01-26T21:31:19.141063+00:00, execution_date=20250126T213119, start_date=20250126T213201, end_date=20250126T213201
+[2025-01-26T21:32:01.869+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-26T21:32:01.909+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-26T21:32:01.916+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
